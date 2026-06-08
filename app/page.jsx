@@ -363,6 +363,13 @@ function PolicyBlock({ block }) {
 }
 
 export default function Home() {
+  const renderSectionLinks = () =>
+    sections.map((section) => (
+      <a key={section.id} href={`#${section.id}`}>
+        {section.title}
+      </a>
+    ));
+
   return (
     <main className="policy-page">
       <header className="site-header" aria-label="Crew">
@@ -398,14 +405,18 @@ export default function Home() {
 
       <div className="content-shell">
         <aside className="toc" aria-label="Policy sections">
-          <p>Sections</p>
-          <nav>
-            {sections.map((section) => (
-              <a key={section.id} href={`#${section.id}`}>
-                {section.title}
-              </a>
-            ))}
-          </nav>
+          <div className="toc-desktop">
+            <p>Sections</p>
+            <nav>{renderSectionLinks()}</nav>
+          </div>
+
+          <details className="toc-mobile">
+            <summary>
+              <span>Sections</span>
+              <strong>Jump to section</strong>
+            </summary>
+            <nav>{renderSectionLinks()}</nav>
+          </details>
         </aside>
 
         <article className="policy-content">
