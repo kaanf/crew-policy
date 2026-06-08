@@ -146,6 +146,34 @@ h1 {
   margin-top: 12px;
 }
 
+.legal-nav {
+  max-width: 650px;
+  margin-top: 26px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.legal-nav a {
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(21, 21, 21, 0.1);
+  border-radius: 999px;
+  padding: 0 13px;
+  background: rgba(255, 255, 255, 0.7);
+  color: #343632;
+  font-size: 0.86rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.legal-nav a[aria-current="page"] {
+  border-color: rgba(23, 98, 79, 0.2);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
 .hero::after {
   content: none;
 }
@@ -211,6 +239,59 @@ h1 {
   scroll-margin-top: 28px;
   padding: 34px 44px;
   border-bottom: 1px solid var(--line);
+}
+
+.legal-index {
+  min-height: 100vh;
+}
+
+.legal-index-hero {
+  margin-bottom: 34px;
+}
+
+.legal-card-grid {
+  width: min(1040px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.legal-card {
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 24px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  transition:
+    border-color 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.legal-card:hover {
+  border-color: rgba(23, 98, 79, 0.26);
+  box-shadow: 0 20px 56px rgba(31, 34, 29, 0.09);
+  transform: translateY(-2px);
+}
+
+.legal-card span {
+  color: var(--ink);
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+  line-height: 1.12;
+  font-weight: 740;
+}
+
+.legal-card p {
+  margin: 30px 0 0;
+  color: var(--text);
+  font-size: 0.96rem;
+  line-height: 1.58;
 }
 
 .policy-section:last-child {
@@ -294,6 +375,17 @@ h3 {
   .content-shell {
     width: min(100%, 680px);
     display: block;
+  }
+
+  .legal-card-grid {
+    width: min(100%, 680px);
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .legal-card {
+    min-height: 150px;
+    padding: 22px;
   }
 
   .toc {
@@ -418,6 +510,16 @@ h3 {
 
   h1 {
     font-size: clamp(2.45rem, 13.2vw, 3.5rem);
+  }
+
+  .legal-nav {
+    gap: 7px;
+  }
+
+  .legal-nav a {
+    min-height: 34px;
+    padding: 0 11px;
+    font-size: 0.82rem;
   }
 
   .policy-section {
