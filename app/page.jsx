@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const sections = [
   {
     id: "information-we-collect",
@@ -369,12 +367,11 @@ export default function Home() {
     <main className="policy-page">
       <header className="site-header" aria-label="Crew">
         <a className="brand" href="#top" aria-label="Crew Privacy Policy">
-          <Image
-            src="/crew_black_logo.png"
+          <img
+            src="crew_black_logo.png"
             alt="Crew"
             width={1201}
             height={387}
-            priority
           />
         </a>
         <a className="contact-link" href="mailto:frtpkaan@gmail.com">
