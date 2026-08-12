@@ -343,6 +343,39 @@ h3 {
   margin-top: 10px;
 }
 
+.policy-section ol.steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.policy-section ol.steps li {
+  position: relative;
+  padding: 14px 18px 14px 56px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+  counter-increment: step;
+}
+
+.policy-section ol.steps li::before {
+  content: counter(step);
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 720;
+  line-height: 1;
+}
+
 .policy-section strong {
   color: var(--ink);
   font-weight: 720;

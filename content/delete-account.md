@@ -8,9 +8,9 @@ This page explains how to delete your Crew account, what data is removed, and ho
 
 ## Option 1: Delete Your Account in the App
 
-- Open the Crew app and sign in.
-- Go to Profile → Settings → Delete Account.
-- Confirm the deletion. Your account and associated data will be removed.
+1. Open the Crew app and sign in.
+2. Go to Profile → Settings → Delete Account.
+3. Confirm the deletion. Your account and associated data will be removed.
 
 ## Option 2: Request Deletion by Email
 

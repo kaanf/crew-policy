@@ -24,12 +24,14 @@ function PolicyBlock({ block }) {
   }
 
   if (block.type === "list") {
+    const List = block.ordered ? "ol" : "ul";
+
     return (
-      <ul>
+      <List className={block.ordered ? "steps" : undefined}>
         {block.items.map((item) => (
           <li key={item}>{renderInlineText(item)}</li>
         ))}
-      </ul>
+      </List>
     );
   }
 
